@@ -1,0 +1,53 @@
+<div class="container">
+<div class="container">
+    
+    <div class="page">
+        <button class="btn btn-success" (click)="showform()">Add New Product </button>
+
+       
+            <form  *ngIf=" formhidden == false || val =='Modifier'" >
+            <div class="form-group"> 
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" [(ngModel)]="product.name" name="name" #name="ngModel" required>
+                
+                <label for="description">Description</label>
+                <input type="text" class="form-control" id="description" [(ngModel)]="product.description" name="description" #description="ngModel" required>
+                
+                <label for="price">Price</label>
+                <input type="number" class="form-control" id="price" [(ngModel)]="product.price" name="price" #price="ngModel" required>
+                
+                <label for="stock">Stock</label>
+                <input type="number" class="form-control" id="stock" [(ngModel)]="product.stock" name="stock" #stock="ngModel" required> 
+                
+                <button class="btn btn-success" type="submit" (click)="saveProduct()"  > {{val}}</button> <br>
+            </div>
+        </form>
+       
+    <table class="table table-bordered table-sm">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of products">
+                <td>{{ p.name }}</td>
+                <td>{{ p.description }}</td>
+                <td>{{ p.price }}</td>
+                <td>{{ p.stock }}</td>
+                <td>
+                    <button class="btn btn-danger" (click)="deleteProduct(p.id)">Delete</button>
+                
+                
+                    <button class="btn btn-primary" (click)="updateProduct()">Update</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+</div>

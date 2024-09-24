@@ -1,0 +1,21 @@
+version: '3'
+services:
+  json-server:
+    image: json-server-image:latest
+    ports:
+      - "3000:3000"
+    container_name: json-server
+    hostname: json-server
+    networks:
+      - some-net
+  angular:
+    image: angular-image:latest
+    ports:
+      - "8888:80"
+    container_name: angular
+    networks:
+      - some-net
+
+networks:
+  some-net:
+    driver: bridge

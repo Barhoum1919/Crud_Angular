@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "id": "5",
+      "name": "ibrahim darghouthi",
+      "description": 15550,
+      "price": 5,
+      "stock": 0
+    },
+    {
+      "id": "686d",
+      "name": "E-commerce Website",
+      "description": "mmm",
+      "price": 500,
+      "stock": 1000
+    },
+    {
+      "id": "e5ac",
+      "name": "E-commerce Website",
+      "description": "mmm",
+      "price": 500,
+      "stock": 1000
+    }
+  ]
+}
